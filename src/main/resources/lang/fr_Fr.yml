@@ -1,0 +1,31 @@
+################################################################
+#                                                              #
+#    $$$$$$\  $$\   $$\       $$\   $$\ $$$$$$$\   $$$$$$\     #
+#   $$  __$$\ $$ | $$  |      $$$\  $$ |$$  __$$\ $$  __$$\    #
+#   $$ /  \__|$$ |$$  /       $$$$\ $$ |$$ |  $$ |$$ /  \__|   #
+#   \$$$$$$\  $$$$$  /        $$ $$\$$ |$$$$$$$  |$$ |         #
+#    \____$$\ $$  $$<         $$ \$$$$ |$$  ____/ $$ |         #
+#   $$\   $$ |$$ |\$$\        $$ |\$$$ |$$ |      $$ |  $$\    #
+#   \$$$$$$  |$$ | \$$\       $$ | \$$ |$$ |      \$$$$$$  |   #
+#    \______/ \__|  \__|      \__|  \__|\__|       \______/    #
+#                                                              #
+################################################################
+
+#Chat messages
+chat_prefix: "SK-NPC >>"
+permission_error: "%chat_prefix% Vous n'avez pas la permission d'effectuer cette action"
+
+admin_npc_created: "%chat_prefix% Vous venez de créer un npc NPC."
+admin_npc_deleted: "%chat_prefix% Vous venez de supprimer le NPC %npc_name%"
+admin_npc_edited: "%chat_prefix% Les modifications apportées au npc %npc_name% ont bien été appliquée."
+
+player_npc_cooldown: "%chat_prefix% Vous devez attendre %time% avant de pouvoir à nouveau effectuer cette action"
+
+player_npc_show_disabled: "%chat_prefix% Vous venez de désactiver l'affichage des NPC"
+player_npc_show_enabled: "%chat_prefix% Vous venez d'activer l'affichage des NPC"
+
+#Menu lang
+
+menu_prefix: "SK-NPC Configuration >>"
+
+

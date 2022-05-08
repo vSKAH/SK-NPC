@@ -1,0 +1,13 @@
+name: SK-NPC
+version: 0.1-SNAPSHOT
+api-version: 1.16
+description: Npc plugin optimized for large servers
+author: vSKAH
+main: fr.skah.sknpc.plugin.SkNpcPlugin
+softdepend:
+  - DecentHolograms
+  - PlaceHolderApi
+  - HolographicDisplays
+commands:
+  npc:
+    description: "edit npc's settings"

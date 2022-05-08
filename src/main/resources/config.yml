@@ -1,0 +1,108 @@
+################################################################
+#                                                              #
+#    $$$$$$\  $$\   $$\       $$\   $$\ $$$$$$$\   $$$$$$\     #
+#   $$  __$$\ $$ | $$  |      $$$\  $$ |$$  __$$\ $$  __$$\    #
+#   $$ /  \__|$$ |$$  /       $$$$\ $$ |$$ |  $$ |$$ /  \__|   #
+#   \$$$$$$\  $$$$$  /        $$ $$\$$ |$$$$$$$  |$$ |         #
+#    \____$$\ $$  $$<         $$ \$$$$ |$$  ____/ $$ |         #
+#   $$\   $$ |$$ |\$$\        $$ |\$$$ |$$ |      $$ |  $$\    #
+#   \$$$$$$  |$$ | \$$\       $$ | \$$ |$$ |      \$$$$$$  |   #
+#    \______/ \__|  \__|      \__|  \__|\__|       \______/    #
+#                                                              #
+################################################################
+
+#Do not change this value, it is used to tell the developer which version of the configuration you are using
+config_version: 1
+
+general:
+  lang: "fr_FR"
+
+
+#The default options will be used to create a standardized npc using the /npc command +
+default_npc:
+  #Set to true if you want the default npc to have a name. Else set to false
+  has_name: true
+  #The default name of the npc if has_name equals true, else this is ignored
+  default_name: "vSKAH"
+  skin:
+    #Set true if you want to set a custom skin to an npc
+    has_skin: true
+    #Set true if you want the skin to be that of the player who visualizes the npc
+    is_mirror: false
+    #Set true if you want the skin to be that of the player who has this uuid
+    use_uuid: false
+    #Put the uuid of the player who has the skin you want to display
+    default_skin_uuid: "5be33fb32bd940debf748424bfce01d2"
+    #Set true if you want the skin to be that of the player who has this nickname
+    use_name: false
+    #Put the nickname of the player who has the skin you want to display
+    default_skin_name: "vSKAH"
+    #Manages the second layer of the skin
+    layers:
+      #Set all to true if you want to activate the second layer on the whole skin. Otherwise you can activate the second layer only on some parts of the body
+      all: false
+      body: true
+      left_hand: true
+      right_hand: true
+      left_leg: true
+      right_leg: true
+      #Set to true if you want to activate the cape on the skin. Does not need to be set to true if all is true
+      cape: false
+
+  tablist:
+    #Set to true if you want the player to appear in the tablist
+    enabled: true
+    #Allows to manage the connection of the npc in the tablist. Not used if enable equals false.
+
+    #You can use :
+    #- NO_CONNECTION (don't show connection in tablist)
+    #- ONE_BAR
+    #- TWO_BARS
+    #- THREE_BARS
+    #- FOUR_BARS
+    #- FIVE_BARS
+    ping: FOUR_BARS
+
+  permissions:
+    #Defines if the player must have permission to see the npc
+    use_view_permission: false
+    #Defines if the player must have permission to interact with the npc
+    use_interact_permission: true
+    #Indicates the permission the player must have to view the NPC if use_view_permission is equal to true
+    view_permission: "npc.default.view"
+    #Indicates the permission the player must have to interact with the NPC if use_interact_permission is equal to true
+    interact_permission: "npc.default.interact"
+
+  interact:
+
+    use_right_click: true
+    #Enable cooldown or we for this interaction ignored if use_right_click equals false
+    use_right_click_cooldown: true
+    #Set cooldown time on interaction, warn of interaction spam (in ms)
+    right_click_cooldown: 40
+    #List of commands executed by the interaction
+    #[player] allows the player to execute the command
+    #[server] allows the command to be executed by the console
+    #%player% returns the nickname of the player who triggered the interaction
+    right_click:
+      - "[player] spawn"
+      - "[server] say %player% was teleported to the spawn"
+
+    use_left_click: true
+    use_left_click_cooldown: true
+    left_click_cooldown: 40
+    left_click:
+      - "[player] spawn"
+      - "[server] say %player% was teleported to the spawn"
+
+  performances:
+    #Allows you to manage how many blocks you can see the npc
+    display_range: 20
+    #Allows you to manage how many blocks the npc updates (skin and name)
+    update_range: 16
+    #Allows to manage all the time the npc is updated (skin, name) in ticks
+    update_interval: 100
+    #Allows you to set the time between two npc updates (caution, this option has never been tested but should increase the performance of your server). (Please do not exceed 150 ticks)
+    between_two_updates: 100
+    #Allows plugin to async fetch skin from Mojang server (disable this can cause performances issues)
+    async_textures_fetch: true
